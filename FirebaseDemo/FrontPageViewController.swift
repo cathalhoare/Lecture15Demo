@@ -7,15 +7,29 @@
 //
 
 import UIKit
+//import CoreLocation
 
-class FrontPageViewController: UIViewController {
+class FrontPageViewController: UIViewController/*, CLLocationManagerDelegate*/ {
 
+    //let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        /*
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        */
     }
-
+    
+    /*
+    func locationManger(_ manger:CLLocationManager, didUpodateLocation locations:[CLLocation]){
+        print("locations \(locations)")
+    }
+    */
+    
     /*
     // MARK: - Navigation
 
