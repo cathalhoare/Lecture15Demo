@@ -7,14 +7,40 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+
+class User{
+        
+    func signin(with username:String, password:String){
+        
+        Auth.auth().signIn(withEmail: username, password:password){
+            [weak self] authResult, error in
+               
+            if(authResult != nil){
+                
+            NotificationCenter.default.post(name:Notification.Name("FirebaseDemo.signedin"), object:nil, userInfo:nil)
+            }
+            else{
+                
+                let errCode = ["error":error!._code]
+                   
+            NotificationCenter.default.post(name:Notification.Name("FirebaseDemo.failedsignin"), object:nil, userInfo:errCode)
+            }
+        }
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var user:User = User()
+   
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+      
         return true
     }
 

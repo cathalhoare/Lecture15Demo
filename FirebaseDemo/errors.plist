@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>errors</key>
+	<dict>
+		<key>17010</key>
+		<string>Too many attempts</string>
+		<key>17011</key>
+		<string>Please enter a valid email</string>
+		<key>17005</key>
+		<string>User is disabled</string>
+		<key>17008</key>
+		<string>Please enter a valid email</string>
+		<key>17009</key>
+		<string>Please enter a valid password</string>
+	</dict>
+</dict>
+</plist>
